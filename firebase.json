@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/recipes-book",
+    "public": "/dist/recipes-book/",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
