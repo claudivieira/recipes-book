@@ -3,6 +3,7 @@ name: Firebase CD
 on:
   push:
     branches: [master]
+    
 jobs:
   deploy:
     name: Deploy
