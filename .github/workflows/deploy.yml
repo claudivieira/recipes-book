@@ -5,22 +5,14 @@ on:
     branches: [master]
     
 jobs:
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
-      - name: Install Dependencies
-        run: npm install
-      - name: Build
-        run: npm run build
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
+      - name: Install Dependencies
+        uses: actions/setup-node@master
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
