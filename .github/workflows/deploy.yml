@@ -1,9 +1,8 @@
-name: Build and Deploy
+name: Firebase CD
+
 on:
   push:
-    branches:
-      - master
-
+    branches: [master]
 jobs:
   build:
     name: Build
@@ -14,12 +13,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: npm run build-prod
-      - name: Archive Production Artifact
-        uses: actions/upload-artifact@master
-        with:
-          name: dist
-          path: dist
+        run: npm run build
   deploy:
     name: Deploy
     needs: build
