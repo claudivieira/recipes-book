@@ -1,13 +1,41 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>RecipesBook</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyAgjKrUL_kDKViTmK8iz-NuXmMALhHS6r4",
+      authDomain: "recipes-book-a2b5d.firebaseapp.com",
+      databaseURL: "https://recipes-book-a2b5d.firebaseio.com",
+      projectId: "recipes-book-a2b5d",
+      storageBucket: "recipes-book-a2b5d.appspot.com",
+      messagingSenderId: "46551789027",
+      appId: "1:46551789027:web:4fbf68b6e3312057e084d6",
+      measurementId: "G-KXYQRTZS5B"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+  </script>
 </head>
+
 <body>
   <app-root></app-root>
 </body>
+
 </html>
