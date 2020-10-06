@@ -9,15 +9,16 @@
         "ecmaVersion": 12,
         "sourceType": "module"
     },
+    "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+        }
+      },
     "plugins": ["@typescript-eslint", "prettier"],
     "rules": {
-        "no-unused-vars": "warn",
-        "array-bracket-newline": [
-            "error",
-            {
-                "multiline": true
-            }
-        ],
+        "no-unused-vars": "off",
         "array-element-newline": [
             "error",
             {
@@ -26,6 +27,21 @@
                     "minItems": 3
                 }
             }
-        ]
+        ],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+              "js": "never",
+              "jsx": "never",
+              "ts": "never",
+              "tsx": "never"
+            }
+         ],
+         "import/prefer-default-export": "off",
+         "no-empty-function": "off",
+         "no-useless-constructor": "off",
+         "class-methods-use-this": "off",
+         "no-undef": "off"
     }
 }
