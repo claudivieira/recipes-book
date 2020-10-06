@@ -9,6 +9,8 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
+  { path: '**', redirectTo: '/not-found' },
+  
   { path: '', redirectTo: '/recipes', pathMatch: 'full' },
   {
     path: 'recipes',
@@ -22,7 +24,6 @@ const appRoutes: Routes = [
   },
   { path: 'shopping-list', component: ShoppingListComponent },
   { path: 'not-found', component: PageNotFoundComponent },
-  { path: '**', redirectTo: '/not-found' },
 ];
 
 @NgModule({
