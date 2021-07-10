@@ -22,6 +22,7 @@ jobs:
           node-version: '14.x'
       # Install the dependencies need to build the app
       - name: Install Dependencies
+        run: npm cache clean --force
         run: npm install
       # Runs a set of commands to build
       - name: Build
