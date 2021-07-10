@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -17,6 +18,7 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RecipeService } from './recipes/recipe.service';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,7 @@ import { RecipeService } from './recipes/recipe.service';
     RecipeEditComponent,
     PageNotFoundComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule, AppRoutingModule],
   providers: [ShoppingListService, RecipeService],
   bootstrap: [AppComponent],
 })
