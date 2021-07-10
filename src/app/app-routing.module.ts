@@ -9,7 +9,8 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
-  { path: '**', redirectTo: '/not-found' },
+  //TODO: uncoment this line for keeping not-found page
+  // { path: '**', redirectTo: '/not-found' },
   
   { path: '', redirectTo: '/recipes', pathMatch: 'full' },
   {
